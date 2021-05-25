@@ -1,0 +1,45 @@
+.keypad {
+  background-color: var(--color-keypad-bg);
+  height: 420px;
+  margin-top: 24px;
+  border-radius: $radius;
+  //   display: grid;
+  //   grid: repeat(4);
+  //   grid-auto-flow: row;
+
+  display: grid;
+  //   grid-gap: 13px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  //   grid-auto-columns: 2fr;
+  //   grid-auto-rows: 100px;
+
+  padding: 24px;
+}
+
+.reset {
+  grid-column: 1 / span 2;
+  color: var(--white);
+  background-color: var(--color-key-bg);
+  border-bottom: 4px solid var(--color-key-shadow);
+
+  @include breakpoint-down(medium) {
+    font-size: 20px;
+  }
+}
+
+.equals {
+  grid-column: 3 / span 2;
+  background-color: var(--color-equal-bg);
+  border-bottom: 4px solid var(--color-equal-shadow);
+  color: var(--color-text);
+}
+
+.delete {
+  color: var(--white);
+  background-color: var(--color-key-bg);
+  border-bottom: 4px solid var(--color-key-shadow);
+}
+
+.right {
+  margin-right: unset;
+}

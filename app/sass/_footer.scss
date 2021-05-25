@@ -1,0 +1,122 @@
+.footer {
+  margin-top: 120px;
+  background-color: $black;
+  color: $white;
+
+  flex-direction: column;
+
+  &__sub {
+    @include breakpoint-up(large) {
+      display: flex;
+      justify-content: space-between;
+      align-items: unset;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 192px;
+    cursor: pointer;
+    img {
+      align-items: center;
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: 20px;
+      align-items: unset;
+
+      display: unset;
+      margin-left: unset;
+      margin-right: unset;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    margin-top: 50px;
+    cursor: pointer;
+    justify-content: center;
+    :not(:last-child) {
+      margin-right: 16px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    :hover {
+      border-bottom: solid 3px $white;
+    }
+    @include breakpoint-up(large) {
+      margin-left: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items-mobile {
+    margin-top: 48px;
+    flex-direction: column;
+    :not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    a {
+      color: white;
+      font-family: $alata;
+      font-weight: 400;
+      padding-bottom: 3px;
+    }
+    cursor: pointer;
+
+    :hover {
+      border-bottom: solid 3px $white;
+    }
+
+    @include breakpoint-up(large) {
+      display: inline-block;
+      flex-direction: row;
+      margin-top: 0;
+      margin-bottom: 25px;
+      //   a {
+      //     margin-bottom: 25px;
+      //   }
+
+      :not(:last-child) {
+        margin-right: 46px;
+      }
+    }
+  }
+
+  p {
+    color: $darkGray;
+    text-align: center;
+  }
+
+  &__nav {
+    img {
+      align-items: center;
+    }
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+  }
+
+  &__copy {
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+      p {
+        text-align: unset;
+      }
+    }
+  }
+}

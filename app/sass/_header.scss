@@ -1,0 +1,97 @@
+// .header {
+//   margin-top: 28px;
+
+//   &__title {
+//     color: white;
+//   }
+
+//   &__right {
+//     &-text {
+//       color: white;
+//       font-size: 12px;
+//       text-transform: uppercase;
+//     }
+
+//     &-container {
+//       display: flex;
+//       flex-direction: column;
+
+//       &-labels {
+//         font-size: 12px;
+//         color: white;
+//       }
+
+//       &-buttons {
+//         background-color: $DarkSaturatedBlue2;
+//         border-radius: 2rem;
+//         transition: background-color 0.3s ease;
+//       }
+//     }
+//   }
+// }
+
+.header {
+  color: var(--color-heading);
+  padding-top: 28px;
+
+  @include breakpoint-up(large) {
+    padding-top: 153px;
+  }
+
+  &__title {
+    font-size: 32px;
+  }
+
+  &__theme {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+    &-options {
+      display: flex;
+      flex-direction: row;
+      width: 60px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 14px;
+
+      span {
+        flex: 1;
+        text-align: center;
+      }
+    }
+
+    &-range {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: var(--color-keypad-bg);
+      border-radius: 0.8em;
+      height: 22px;
+      padding: 4px;
+    }
+  }
+}
+.header > * {
+  transition: inherit;
+}
+
+.header__theme-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.header__theme-range::-moz-range-thumb {
+  width: 16px; /* Set a specific slider handle width */
+  height: 16px; /* Slider handle height */
+  border-radius: 50%;
+  background: var(--color-equal-bg);
+  cursor: pointer; /* Cursor on hover */
+  border: none;
+}
